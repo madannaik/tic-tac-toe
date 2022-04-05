@@ -28,11 +28,11 @@ body {
   gap: 1rem;
   margin-bottom: 4rem;
 }
-.player__1 {
+.player__X {
   font-size: 2rem;
   color: #09c6f9;
 }
-.player__2 {
+.player__O {
   font-size: 2rem;
   color: #e9902a;
 }
@@ -70,23 +70,25 @@ body {
   display: grid;
   place-items: center;
 }
-.board__tile.letter__x {
+.board__tile.letter__X {
   background: -webkit-linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 10px 15px 20px #045de9;
   font-size: 3rem;
   font-weight: 900;
+  transition: all 0.3s ease-in-out;
 }
 /* background-color: #045de9; */
 /* background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%); */
-.board__tile.letter__o {
+.board__tile.letter__O {
   background: -webkit-linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 10px 15px 20px #e9902a;
   font-size: 3rem;
   font-weight: 900;
+  transition: all 0.3s ease-out;
 }
 /* background-color: #f9484a;
 background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%); */
@@ -97,17 +99,15 @@ background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%); */
   flex-direction: row;
   gap: 10px;
 }
-.controls__reset {
+.controls__btn {
   appearance: button;
   backface-visibility: hidden;
   /* background-color: #e64f4f; */
-  background-color: #ff7878;
-  background-image: linear-gradient(315deg, #ff7878 0%, #ff0000 74%);
 
   border-radius: 6px;
   border-width: 0;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
+  font-weight: 600;
   color: #fff;
   cursor: pointer;
   font-size: 100%;
@@ -124,15 +124,24 @@ background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%); */
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
 }
 
-.controls__reset:disabled {
+.controls__btn:disabled {
   cursor: default;
 }
 
-.controls__reset:focus {
+.controls__btn:focus {
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
     rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
     rgba(131, 47, 5, 0.3) 0 0 0 4px;
+}
+.controls__reset {
+  width: 150px;
+  background-color: #ff7878;
+  background-image: linear-gradient(315deg, #ff7878 0%, #ff0000 74%);
+}
+.controls__end {
+  width: 150px;
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }

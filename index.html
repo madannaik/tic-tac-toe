@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/modal.css">
 
     <title>Document</title>
 </head>
@@ -20,23 +20,23 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+            <span id="close_t" class="close">&times;</span>
+            <div id="game_details">Some text in the Modal..</div>
         </div>
 
     </div>
     <div class="main">
         <div class="player">
-            <div class="player__1">X</div>
-            <div class="player__score">0-0</div>
-            <div class="player__2">O</div>
+            <div class="player__X">X</div>
+            <div class="player__score" id="player_score">0-0</div>
+            <div class="player__O">O</div>
         </div>
         <div class="turn">
-            <p class="turn__text">Player X turn</p>
+            <p class="turn__text" id="player__turn">Player X turn</p>
         </div>
         <section class="board">
-            <div class="board__tile letter__x">X</div>
-            <div class="board__tile letter__o">O</div>
+            <div class="board__tile"></div>
+            <div class="board__tile"></div>
             <div class="board__tile"></div>
             <div class="board__tile"></div>
             <div class="board__tile"></div>
@@ -46,8 +46,8 @@
             <div class="board__tile"></div>
         </section>
         <div class="controls">
-            <button class="controls__reset">Reset</button>
-            <button class="controls__reset">End game</button>
+            <button id="reset_game" class="controls__btn controls__reset">Reset</button>
+            <button id="end_game" class="controls__btn controls__end">End game</button>
         </div>
         <div class="result">
             <div class="result__win"></div>
