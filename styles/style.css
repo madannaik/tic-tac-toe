@@ -74,7 +74,7 @@ body {
   background: -webkit-linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 10px 15px 20px #045de9;
+  text-shadow: 10px 15px 25px #045de9;
   font-size: 3rem;
   font-weight: 900;
   transition: font-size 0.3s ease-in-out;
@@ -85,7 +85,7 @@ body {
   background: -webkit-linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 10px 15px 20px #e9902a;
+  text-shadow: 10px 15px 25px #e9902a;
   font-size: 3rem;
   font-weight: 900;
   transition: font-size 0.3s ease-out;
