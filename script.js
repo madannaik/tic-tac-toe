@@ -58,6 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
         })
         playerTurn = "X";
         playerTurnTxt.innerHTML = `Player ${playerTurn} turn`;
+        tile.forEach((sTile) => sTile.classList.remove('letter__X', 'letter__O'));
         board = ['', '', '', '', '', '', '', '', ''];
     }
     function markBoard(sTile, index) {
