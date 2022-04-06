@@ -1,10 +1,12 @@
+'use strict';
 window.addEventListener('DOMContentLoaded', () => {
 
     // query selectors
     const tile = document.querySelectorAll(".board__tile");
-    const playerTurnTxt = document.getElementById('player__turn');
-    const playerScoreTxt = document.getElementById('player_score');
+    const playerTurnTxt = document.getElementsByClassName('turn__text')[0];
+    const playerScoreTxt = document.getElementsByClassName('player__score')[0];
     const endBtn = document.getElementById('end_game');
+    const resetBtn = document.getElementById('reset_game');
     const modal = document.getElementById("myModal");
     const span = document.getElementById("close_t");
 
@@ -29,21 +31,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Listeners
 
+    // Mark the tile according to the user turn
     tile.forEach((sTile, index) => {
         sTile.addEventListener("click", () => markBoard(sTile, index))
     })
 
+    // close modal popup
+    span.onclick = closeModal;
 
-    span.onclick = function () {
-        modal.style.display = "none";
-        playerOScore = 0;
-        playerXScore = 0;
-        setScore()
-        clearBoard()
-    }
-    endBtn.addEventListener('click', endGame);
+    endBtn.onclick = endGame;
 
-    document.getElementById('reset_game').addEventListener('click', clearBoard);
+    resetBtn.onclick = clearBoard;
 
     // When the user clicks on <span> (x), close the modal
     window.onclick = function (event) {
@@ -51,6 +49,8 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
+
+
     // utility functions
     function clearBoard() {
         tile.forEach(sTile => {
@@ -62,6 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     function markBoard(sTile, index) {
         if (sTile.innerHTML === '') {
+            // update board
             board[index] = playerTurn;
             sTile.innerHTML = playerTurn;
             sTile.classList.remove('letter__X', 'letter__O')
@@ -115,6 +116,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 clearBoard();
             }
         }
+    }
+    function closeModal() {
+        modal.style.display = "none";
+        playerOScore = 0;
+        playerXScore = 0;
+        setScore()
+        clearBoard()
     }
 })
 
