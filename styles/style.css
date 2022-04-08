@@ -57,6 +57,7 @@ body {
   height: fit-content;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  position: relative;
   display: grid;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   grid-template-columns: repeat(3, 100px);
@@ -141,4 +142,14 @@ body {
   width: 150px;
   background-color: #045de9;
   background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+.board__strike {
+  position: absolute;
+  /* left: ; */
+  width: 5px;
+  height: 0;
+  transform-origin: top center;
+  /* height: 300px; */
+  /* background-color: #e9902a; */
+  transition: all 0.5s;
 }

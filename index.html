@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/snackbar.css">
     <title>Tic-Tac-Toe</title>
 </head>
 
@@ -34,6 +35,7 @@
             <p class="turn__text">Player X turn</p>
         </div>
         <section class="board">
+            <div class="board__strike" id="board_strike"></div>
             <div class="board__tile"></div>
             <div class="board__tile"></div>
             <div class="board__tile"></div>
@@ -53,7 +55,7 @@
         </div>
     </div>
 
-
+    <div id="snackbar"></div>
     <script src="script.js"></script>
 </body>
 
